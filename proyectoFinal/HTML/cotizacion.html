@@ -2,10 +2,8 @@
 <!Doctype html>
 <html>
     <head>
-
         <title> Cotiza</title>
         <link rel="stylesheet" href="../css/miestilo.css">
-        
     </head>
     <body>
         <div class="agrupar">
@@ -78,7 +76,7 @@
                     <a>Precio por pieza: </a>
                     <input type="text" id=precio5 id="precio5" name="precio5" value="42.00" style="width :60px" readonly="readonly"><br>
                     <a>Cantidad: </a>
-                    <input type=text id=prod5Id name=prod5Id style="width : 110px; font-size: small;" placeholder="haz tu pedido" >
+                    <input type=text id=prod5Id name=prod5Id style="width : 110px;" placeholder="haz tu pedido" >
                 </td>
                 <td><img src="../img/anticongelante.jpg" alt ="anticongelante" style="width:200px;height:200px;"><br>
                     <input type=checkbox id=anticongelante name=anticongelante/><label for="anticongelante">Anticongelante</label> <br>
@@ -93,42 +91,39 @@
         </div>
         <br><br>
         
-        <p> 
-        <button type="button" onclick="leer()" > <h3>Oprime para obtener un subtotal</h3></button><br><br><br>
-        <label style="font-family: Arial; font-size: 14pt">Total a pagar: </label>
-        <input maxlength="30px" type="text" id="total" name="total" value="0.0" readonly="readonly" style="font-family: Arial; font-size: 18pt"><br><br><br>
-        <button type="button" onclick="comprar()"><h3>Realizar compra</h3></button> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
-        <button type="button" onclick="limpiar()"><h3>Nueva cotizaci&oacute;n</h3></button>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; 
-        <input class="entrada" type="button" value="Recargar la pagina" onclick="location.reload()">
-        </p>
+        <div class="centrado">
+            <button type="button" onclick="leer()" > <h3>Oprime para obtener un subtotal</h3></button><br><br><br>
+            <label style="font-family: Arial; font-size: 14pt">Total a pagar: </label><br><br>
+            <input maxlength="30px" type="text" id="total" name="total" value="0.0" readonly="readonly" style="font-family: Arial; font-size: 18pt"><br><br><br>
+            <button type="button" onclick="comprar()"><h3>Realizar compra</h3></button> &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
+            <button type="button" onclick="limpiar()"><h3>Nueva cotizaci&oacute;n</h3></button>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; 
+        </div>
+        <br><br>
 
         <!--img id="pagoTarjeta" onclick="pagoExitosoTarjeta()" src="../img/pagoExitosoTarjeta.jpg" style="width:100px"-->
         
-        <table id="Tablacompra" border="10" cellpadding="20px" cellspacing="10px">
-            <caption>
-                Ticket de compra
-            </caption>
-            <!--tr = table row  th= table heading td= define una celda en una tabla-->
-            <thead>
-            <tr><th>Cantidad</th><th>Articulos</th><th>Importe</th><tr>
-            </thead>
-            <tbody>
-            </tbody>
-            <!--tfoot bgcolor="cyan"> <td colspan="2" align="right">Total:</td><td align="right"></td>
-            </tfoot-->
-            
-        </table>
-        <br><br><br>
-        <p>
-        <label>Forma de pago: </label> &nbsp; &nbsp; &nbsp;
-        <label><input type=radio id="Tarjeta" name="pago" value="Tarjeta" required/>Tarjeta Credito </label>&nbsp; &nbsp; &nbsp;
-        <label><input type=radio id="Transferencia" name="pago" value="Transferencia" required />Transferencia interbancaria</label> <br>
-    </p>
+        <div id="ticket">
+            <h1 class="centrado" style="text-decoration:underline;">Ticket de compra</h1>
+            <p id="amortiguadoresT"></p>
+            <p id="balerosT"></p>
+            <p id="bujesT"></p>
+            <p id="generadorT"></p>
+            <p id="portaEquipajeT"></p>
+            <p id="anticongelanteT"></p>
+            <p id="totalCompra" style="text-align:right;"></p>
+        </div>
+        <div>
+            <label>Forma de pago: </label> &nbsp; &nbsp; &nbsp;
+            <label><input type=radio id="Tarjeta" name="pago" value="Tarjeta" required/>Tarjeta Credito </label>&nbsp; &nbsp; &nbsp;
+            <label><input type=radio id="Transferencia" name="pago" value="Transferencia" required />Transferencia interbancaria</label> <br>
+        </div>
     <!--p><input type="submit" value="Realizar pago" onclick="pagar()" ></p-->
+    <br>
     <form action="../img/pagoAcreditado.jpg">
         <input type="submit" value="Realizar pago" onclick="pagar()" >
         <!--button type="submit">Pagar</button-->
     </form>
+    <br>
     <footer class="pie">
         Refaccionaria Automotriz, 2022
     </footer>

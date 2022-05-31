@@ -60,16 +60,25 @@ function limpiar(){
     document.getElementById("generador").checked=false;
     document.getElementById("portaequipaje").checked=false;
     document.getElementById("anticongelante").checked=false;
+    let ticket = document.getElementById("ticket");
+    ticket.style.display = "none";
+    document.getElementById("amortiguadoresT").innerHTML=" ";
+    document.getElementById("balerosT").innerHTML=" ";
+    document.getElementById("bujesT").innerHTML=" ";
+    document.getElementById("generadorT").innerHTML=" ";
+    document.getElementById("portaEquipajeT").innerHTML=" ";
+    document.getElementById("anticongelanteT").innerHTML=" ";
 }
 
 function comprar(){
+    let ticket = document.getElementById("ticket");
+    ticket.style.display = "block";
     var resul1=0.0;
     var resul2=0.0;
     var resul3=0.0;
     var resul4=0.0;
     var resul5=0.0;
     var resul6=0.0;
-    var compraprods=document.getElementById("Tablacompra").getElementsByTagName("tbody")[0];
     var dato1=parseFloat(document.getElementById("precio1").value);
     var dato1b=parseFloat(document.getElementById("prod1Id").value);
     resul1=(dato1 * dato1b);
@@ -91,84 +100,50 @@ function comprar(){
    
 
 if (document.getElementById("amortiguadores").checked){
-    var addRow=compraprods.insertRow(-1);
-    var addCell=addRow.insertCell(0);
-    addCell.textContent=dato1b;
-    addCell=addRow.insertCell(1);
-    addCell.textContent="Amortiguadores";
-    addCell=addRow.insertCell(2);
-    addCell.textContent=resul1;
+    let amortiguadores = document.getElementById("amortiguadoresT");
+    amortiguadores.innerHTML = "Amortiguadores: "+dato1b+" pzas. "+" $"+dato1+"c/u"+" subtotal "+"$"+resul1;
 }else{
     resul1=0;
 }
 
 if (document.getElementById("baleros").checked){
-    var addRow=compraprods.insertRow(-1);
-    var addCell=addRow.insertCell(0);
-    addCell.textContent=dato2b;
-    addCell=addRow.insertCell(1);
-    addCell.textContent="Baleros";
-    addCell=addRow.insertCell(2);
-    addCell.textContent=resul2;
+    let baleros = document.getElementById("balerosT");
+    baleros.innerHTML = "Baleros: "+dato2b+" pzas. "+" $"+dato2+"c/u"+" subtotal "+"$"+resul2;
 }else{
     resul2=0;
 }
 
 if (document.getElementById("bujes").checked){
-    var addRow=compraprods.insertRow(-1);
-    var addCell=addRow.insertCell(0);
-    addCell.textContent=dato3b;
-    addCell=addRow.insertCell(1);
-    addCell.textContent="Bujes";
-    addCell=addRow.insertCell(2);
-    addCell.textContent=resul3;
+    let bujes = document.getElementById("bujesT");
+    bujes.innerHTML = "Bujes: "+dato3b+" pzas. "+" $"+dato3+"c/u"+" subtotal "+"$"+resul3;
 }else{
     resul3=0;
 }
 
 if (document.getElementById("generador").checked){
-    var addRow=compraprods.insertRow(-1);
-    var addCell=addRow.insertCell(0);
-    addCell.textContent=dato4b;
-    addCell=addRow.insertCell(1);
-    addCell.textContent="Generador";
-    addCell=addRow.insertCell(2);
-    addCell.textContent=resul4;
+    let generador = document.getElementById("generadorT");
+    generador.innerHTML = "Generador: "+dato4b+" pzas. "+" $"+dato4+"c/u"+" subtotal "+"$"+resul4;
 }else{
     resul4=0;
 }
 
 if (document.getElementById("portaequipaje").checked){
-    var addRow=compraprods.insertRow(-1);
-    var addCell=addRow.insertCell(0);
-    addCell.textContent=dato5b;
-    addCell=addRow.insertCell(1);
-    addCell.textContent="Portaequipaje";
-    addCell=addRow.insertCell(2);
-    addCell.textContent=resul5;
+    let portaequipaje = document.getElementById("portaEquipajeT");
+    portaequipaje.innerHTML = "Porta equipaje: "+dato5b+" pzas. "+" $"+dato5+"c/u"+" subtotal "+"$"+resul5;
 }else{
     resul5=0;
 }
 
 if (document.getElementById("anticongelante").checked){
-    var addRow=compraprods.insertRow(-1);
-    var addCell=addRow.insertCell(0);
-    addCell.textContent=dato6b;
-    addCell=addRow.insertCell(1);
-    addCell.textContent="Anticongelante";
-    addCell=addRow.insertCell(2);
-    addCell.textContent=resul6;
+    let anticongelante = document.getElementById("anticongelanteT");
+    anticongelante.innerHTML = "Anticongelante: "+dato6b+" pzas. "+" $"+dato6+"c/u"+" subtotal "+"$"+resul6;
 }else{
     resul6=0;
 }
 
-var addRow=compraprods.insertRow(-1);
-var addCell=addRow.insertCell(0);
-addCell.textContent=" ";
-addCell=addRow.insertCell(1);
-addCell.textContent="Total:";
-addCell=addRow.insertCell(2);
-addCell.textContent=resul1 + resul2 + resul3 + resul4 + resul5 + resul6;
+let total = document.getElementById("totalCompra");
+total.innerHTML="Total: "+(resul1 + resul2 + resul3 + resul4 + resul5 + resul6);
+console.log(resul1 + resul2 + resul3 + resul4 + resul5 + resul6);
 
 }
 
