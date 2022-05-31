@@ -1,0 +1,160 @@
+.agrupar{
+    width: 100%;
+    margin: 15px auto;
+    padding: 5px;
+}
+
+/*la siguiente instrucción maneja comandos en bloque aplicables a mas de un elemento */
+header, nav,section{
+    display: block;
+    margin: 15px;
+    padding: 5px;
+}
+
+.header{
+    background: #ffeaa7;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 20px;
+    text-shadow: 2px 2px 5px gold;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+body{
+    background-color: khaki;
+}
+td:hover{
+    background-color:#ffeaa7;
+}
+
+.entrada{
+  background: #ffeaa7;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: auto;
+}
+.entrada:hover{
+  background-color: goldenrod;
+}
+
+button {
+    background: #ffeaa7;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+  button:hover {
+    background-color: goldenrod;
+  }
+
+  label, legend, input, select {
+    font: bold 16px verdana;
+  }
+
+  .txtarea{
+    font-family: "verdana";
+    font-size: 16px;
+  }
+
+.pie{
+    width: 96%;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    background: #ffeaa7;
+    /* clear: both;Anula el echo de que los bloques floten, pero conservan su posición */
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    
+}
+
+.mostrador{
+    margin: 0 auto;
+}
+
+.imagen{
+    box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.5);
+    border-radius: 20px;
+} 
+
+#multisombras{
+    border: 3px solid;
+    padding-left: 500px;
+    box-shadow: 5px 5px blue, 15px 15px red, 25px 25px green;
+    margin-left: 150px;
+    margin-right: 200px;
+    font-size: 2em;
+}
+
+.menu{
+    background: #ffeaa7;
+    padding: 5px;
+    text-align: center;
+    font: bold 15px verdana;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5)
+}
+
+.menu a{
+    text-decoration: none !important;
+    color: black;
+}
+
+.menu a:hover{
+    background-color: khaki;
+}
+
+/*En la siguiente instrucción nos referimos a la modificacion de los elementos
+li contenidos en la clase menu*/
+.menu li{
+    list-style: none; /*Elimina los bulets del menu*/
+    display: inline-block; /*Acomoda el menú de manera horizontal*/
+    padding: 5px;
+}
+
+#quieroComprar{
+    text-decoration: none;
+    color: crimson;
+    text-transform: uppercase;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#formulario{
+    width: 50%;
+    margin: auto;
+    background-color: #ffeaa7;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius:20px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.form{
+    width: 90%;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form:focus{
+    background-color: khaki;
+}
+
+.texto{
+    text-align: justify;
+}
+
+.centrado{
+    text-align: center;
+}

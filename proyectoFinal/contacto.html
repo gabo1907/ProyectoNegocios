@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="Refaccionaria", content="Empresa dedicada a la venta de refacciones automotrices" />
+        <meta name="Autores", content="Diaz Garcia Porfirio, Espitia Ascencio Juan Antonio, Hernandez Torres Agustin de Jesus y Zarco Muñoz Gabriel"/>
+        <meta charset="utf-8"/>
+        <title>Refaccionaria automotriz</title>
+        <link rel="stylesheet" href="/css/miestilo.css">
+    </head>
+    <body>
+    <div class="agrupar">
+    <header class="header">
+        <h1>Contactos</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="mirefaccionaria.html">Principal</a> 
+            </li>
+            <li>
+            </li>
+            <li>
+                <a href="quienes_somos.html">Quienes somos</a> 
+            </li>
+            <li>
+                <a href="mision.html">Nuestra mision</a> 
+            </li>
+            <li>
+                <a href="help.html">Ayuda</a> 
+            </li>
+            <li>
+                <a class="activo" href="contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="cotizacion.html">Productos y cotizacion</a>
+            </li>
+        </ul>
+    </nav>
+    <script src="/js/miscript.js"></script>
+    <div id="formulario">
+        <br>
+        <h1>Datos del cliente</h1>
+        <form name ="form" method="post" action="registros.php"> <!--get muestra los datos enviados    post no los muestra--> <br>
+            <!--el comando get muestra los datos enviados mientras que post no los muestra-->
+            <!--fieldset-->
+            <legend>Favor de ingresar su información:</legend><br>
+            
+            <!--label>Número de solicitud:</label>
+            <input type=text id=id name=id readonly> <br><br-->
+            
+            <label>Nombre o razón social:</label>
+            <br>
+            <input class="form" type="text" id="nombre" name="nombre" required> <br><br>
+            <label>Correo electrónico:</label>
+            <br>
+            <input class="form" type="email" id="email" name="email" required> <br><br>
+            <label>Tipo de usuario:</label>
+            <br>
+            <select class="form" id="tipousuario" name="tipousuario" required> 
+                <option>Cliente particular</option>
+                <optgroup label="Taller">
+                <option>Taller Mecánico</option>
+                <option>Taller de Hojalatería y pintura</option>
+                <option>Taller Eléctrico</option>
+            </optgroup>
+            <optgroup label="Especialista">
+                <option>Especialista en Frenos</option>
+                <option>Especialista en Motor</option>
+                <option>Especialista en Elevadores y chapas</option>
+            </optgroup>
+            <optgroup label="Empresa">
+                <option>Agencia automotriz</option>
+                <option>Empresa con flotilla</option>
+                <option>Empresa Llantera</option>
+            </optgroup>
+            </select>
+            <br><br>
+            <label>Dirección:</label>
+            <br>
+            <input class="form" type="text" id="direc" name="direc" required> <br><br>
+            <label>Teleforno/WhatsApp:</label>
+            <br>
+            <input class="form" type="tel" id="whats" name="whats" required> <br><br>
+
+            <label>Asunto:</label>
+            <br>
+        <select class="form" type="text" id="asunto" name="asunto" required>
+            <option>Cotización</option>
+            <option>Atención a clientes</option>
+            <option>Quejas y sugerencias</option>
+        </select><br><br>
+
+        <label>Deja tu mensaje:</label><br>
+        <textarea class="form" class="txtarea" id="mensaje" name="mensaje" required >
+            
+        </textarea><br><br><br>
+    </form>
+</div>
+<br>
+<div class="centrado">
+    <input class="entrada" type="reset" value="Limpiar formulario"> 
+    <input class="entrada" type="submit" value="Enviar">
+</div>
+<h2 class="texto">Ponemos a tu disposición los siguientes teléfonos y nuestras redes sociales. </h2>
+<h2 class="texto"> tel 52 55 1234 5678 extensiones 2451 a la 2460</h2>
+<footer class="pie agrupar">
+    Refaccionaria Automotriz, 2022
+</footer>
+</body>
+</html>
