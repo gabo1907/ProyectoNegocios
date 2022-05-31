@@ -83,6 +83,8 @@ button {
 .imagen{
     box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.5);
     border-radius: 20px;
+    width: 50%;
+    text-align: center;
 } 
 
 #multisombras{
