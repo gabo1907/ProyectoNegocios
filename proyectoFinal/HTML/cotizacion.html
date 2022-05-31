@@ -102,7 +102,7 @@
         <input class="entrada" type="button" value="Recargar la pagina" onclick="location.reload()">
         </p>
 
-        <img id="pagoTarjeta" src="pagoExitosoTarjeta.jpg" style="width:100px">
+        <!--img id="pagoTarjeta" onclick="pagoExitosoTarjeta()" src="../img/pagoExitosoTarjeta.jpg" style="width:100px"-->
         
         <table id="Tablacompra" border="10" cellpadding="20px" cellspacing="10px">
             <caption>
@@ -124,7 +124,11 @@
         <label><input type=radio id="Tarjeta" name="pago" value="Tarjeta" required/>Tarjeta Credito </label>&nbsp; &nbsp; &nbsp;
         <label><input type=radio id="Transferencia" name="pago" value="Transferencia" required />Transferencia interbancaria</label> <br>
     </p>
-    <p><input type="submit" value="Realizar pago" onclick="pagar()" ></p>
+    <!--p><input type="submit" value="Realizar pago" onclick="pagar()" ></p-->
+    <form action="../img/pagoAcreditado.jpg">
+        <input type="submit" value="Realizar pago" onclick="pagar()" >
+        <!--button type="submit">Pagar</button-->
+    </form>
     <footer class="pie">
         Refaccionaria Automotriz, 2022
     </footer>

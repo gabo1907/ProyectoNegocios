@@ -66,11 +66,11 @@ button {
 
 .pie{
     width: 96%;
-    margin: 0 auto;
+    margin: auto;
     padding: 15px;
     text-align: center;
     background: #ffeaa7;
-    /* clear: both; Anula el echo de que los bloques floten, pero conservan su posición */
+    /* clear: both;Anula el echo de que los bloques floten, pero conservan su posición */
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
     border-radius: 20px;
     
@@ -159,14 +159,4 @@ li contenidos en la clase menu*/
 
 .centrado{
     text-align: center;
-}
-
-.container-ofertas{
-    text-align: center;
-}
-
-.ofertas{
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
 }
