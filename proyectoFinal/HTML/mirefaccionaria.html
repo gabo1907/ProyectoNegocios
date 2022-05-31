@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta name="Refaccionaria", content="Empresa dedicada a la venta de refacciones automotrices" />
+    <meta name="Autores", content="Diaz Garcia Porfirio, Espitia Ascencio Juan Antonio, Hernandez Torres Agustin de Jesus y Zarco Muñoz Gabriel"/>
+    <meta charset="utf-8"/>
+    <title>Refaccionaria automotriz</title>
+    <link rel="stylesheet" href="../css/miestilo.css">
+    <script src="../js/miscript.js"></script>
+    </head>
+
+    <script>
+        posicionImagen=0
+        imagenes=[
+            "aceite.jpg",
+            "amortiguadores.jpg",
+            "anticongelante.jpg",
+            "baleros automotrices.jpg",
+            "bateria.jpg",
+            "bujes.jpg",
+            "bujias.jpg",
+            "canastilla.jpg",
+            "ciguenal.jpg",
+            "computadora.jpg",
+            "faros automotrices.jpg",
+            "generador.jpg",
+            "juntas homocineticas.jpg",
+            "llantas.jpg",
+            "mangueras.jpg",
+            "micasfaros.jpg",
+            "motor.jpg",
+            "portaequipaje.jpg",
+            "puerta.jpg",
+            "radiador.jpg",
+            "retrovisor.jpg",
+            "rin automotriz.jpg",
+            "sistema de escape.jpg",
+            "suspension.jpg"
+        ]
+    
+        function avanzar(){
+            if (posicionImagen >= imagenes.length-1){
+                posicionImagen=0;
+            }
+            else{
+                posicionImagen ++
+                
+            }
+            mostrarImagen()
+        }
+    
+        function atras(){
+            if (posicionImagen <= 0){
+                posicionImagen=imagenes.length-1;
+            }
+            else{
+                posicionImagen --
+                   
+            }
+            mostrarImagen()
+        }
+    
+        
+        function mostrarImagen(){
+            name =imagenes[posicionImagen]
+            document.getElementById("imagen").src=name
+        }
+    
+        
+    </script>
+    <body>
+    <div class="agrupar">
+    <header class="header">
+        <h1>Refaccionaria Automotriz</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a class="activo" href="mirefaccionaria.html">Principal</a> 
+            </li>
+            <li>
+                <a href="quienes_somos.html">Quienes somos</a> 
+            </li>
+            <li>
+                <a href="mision.html">Nuestra mision</a> 
+            </li>
+            <li>
+                <a href="help.html">Ayuda</a> 
+            </li>
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="cotizacion.html">Productos y cotizacion</a>
+            </li>
+        </ul>
+    </nav>
+    <img class="imagen" id="mirefaccionaria" src="../img/mirefaccionaria.jpg" width="100%"/>
+    <h1>¡Ofertas de locura, descúbrelas!</h1>
+    <img src="../img/anticongelante.jpg" width="400" heigth="400" onmouseover="this.src='../img/desc20.jpg'" onmouseout="this.src='../img/anticongelante.jpg'" /> &nbsp; &nbsp; &nbsp; &nbsp;
+    <img src="../img/computadora.jpg" width="400" heigth="400" onmouseover="this.src='../img/desc5.jpg'" onmouseout="this.src='../img/computadora.jpg'" /> &nbsp; &nbsp; &nbsp; &nbsp;
+    <br><br><br>
+    <img src="../img/llantas.jpg" width="400" heigth="400" onmouseover="this.src='../img/desc15.jpg'" onmouseout="this.src='../img/llantas.jpg'" /> &nbsp; &nbsp; &nbsp; &nbsp;
+    <br>
+    <a id="quieroComprar" href="cotizacion.html" target="_blank" >Quiero comprar, YA</a>
+    <footer class="pie">
+            Refaccionaria Automotriz, 2022
+        </footer>
+    </body>
+</html>
