@@ -175,14 +175,13 @@ addCell.textContent=resul1 + resul2 + resul3 + resul4 + resul5 + resul6;
 function pagar(){
     if (document.getElementById("Tarjeta").checked){
         alert("Elegiste tarjeta");
-        //<!--a href="tarjeta.html"></a>;
+        document.getElementById("pagoTarjeta").src='pagoExitosoTarjeta.jpg'
+        //<a href="tarjeta.html"></a>;
     }else{
         alert("Elegiste Transferencia");
         //<a href="transferencia.html"></a>;
     }
 }
-
-
 
 
 

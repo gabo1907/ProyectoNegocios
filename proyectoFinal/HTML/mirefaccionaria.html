@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta name="Refaccionaria", content="Empresa dedicada a la venta de refacciones automotrices" />
+    <meta name="Autores", content="Diaz Garcia Porfirio, Espitia Ascencio Juan Antonio, Hernandez Torres Agustin de Jesus y Zarco Muñoz Gabriel"/>
+    <meta charset="utf-8"/>
+    <title>Refaccionaria automotriz</title>
+    <link rel="stylesheet" href="/css/miestilo.css">
+    <script src="/js/miscript.js"></script>
+    <style>
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+    </style>
+    </head>
+    <body>
+    <div class="agrupar">
+    <header class="header">
+        <h1>Refaccionaria Automotriz</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a class="activo" href="mirefaccionaria.html">Principal</a> 
+            </li>
+            <li>
+                <a href="quienes_somos.html">Quienes somos</a> 
+            </li>
+            <li>
+                <a href="mision.html">Nuestra mision</a> 
+            </li>
+            <li>
+                <a href="help.html">Ayuda</a> 
+            </li>
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="cotizacion.html">Productos y cotizacion</a>
+            </li>
+        </ul>
+    </nav>
+    <img class="imagen" id="mirefaccionaria" src="/img/mirefaccionaria.jpg" width="100%"/>
+    <h1 style="text-align: center;">¡Ofertas de locura, descúbrelas!</h1>
+    <div class="container-ofertas">
+        <img class="ofertas" src="/img/anticongelante.jpg" onmouseover="this.src='/img/desc20.jpg'" onmouseout="this.src='/img/anticongelante.jpg'" /> &nbsp; &nbsp; &nbsp; &nbsp;
+        <img class="ofertas" src="/img/computadora.jpg" onmouseover="this.src='/img/desc5.jpg'" onmouseout="this.src='/img/computadora.jpg'" /> &nbsp; &nbsp; &nbsp; &nbsp;
+        <img class="ofertas" src="/img/llantas.jpg" onmouseover="this.src='/img/desc15.jpg'" onmouseout="this.src='/img/llantas.jpg'" /> &nbsp; &nbsp; &nbsp; &nbsp;    
+    </div>
+    <br>
+    <a id="quieroComprar" href="cotizacion.html" target="_blank" >Quiero comprar, YA</a>
+    
+    <footer class="pie">
+            Refaccionaria Automotriz, 2022
+    </footer>
+    </body>
+</html>
